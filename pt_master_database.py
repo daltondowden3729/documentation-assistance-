@@ -1,5 +1,5 @@
-# PT Documentation Assistant Master Database v4
-# Batch 3 added: Bankart, Posterior Bankart, RTC Small/Medium, RTC Large, Lower Trap Transfer.
+# PT Documentation Assistant Master Database v5
+# Batch 4 added: Distal Biceps, Tennis Elbow, Lumbar Fusion, Lumbar Discectomy, Lumbar Laminectomy.
 
 protocols = {'Neck': {'Cervical': {}},
  'Arm': {'Shoulder': {'Post-operative Bankart Repair': {'phases': {'Phase I: 0-6 weeks': {'goals': ['Protect repair',
@@ -1705,14 +1705,813 @@ protocols = {'Neck': {'Cervical': {}},
                                                                                                                                                'to '
                                                                                                                                                'unrestricted '
                                                                                                                                                'activity']}}}},
-         'Elbow': {'Distal Biceps Repair': {'status': 'indexed', 'phases': {}},
-                   'Lateral Epicondylitis (Tennis Elbow)': {'status': 'indexed', 'phases': {}}},
+         'Elbow': {'Distal Biceps Repair': {'phases': {'Phase I: 0-2 weeks': {'goals': ['Protect repair',
+                                                                                        'Control pain and edema',
+                                                                                        'Maintain uninvolved mobility'],
+                                                                              'precautions': ['No elbow ROM unless '
+                                                                                              'cleared',
+                                                                                              'No active biceps '
+                                                                                              'contraction',
+                                                                                              'No lifting',
+                                                                                              'Avoid resisted '
+                                                                                              'supination'],
+                                                                              'brace': ['Brace or splint per surgeon '
+                                                                                        'instructions'],
+                                                                              'weight_bearing': ['No weight bearing '
+                                                                                                 'through involved '
+                                                                                                 'upper extremity'],
+                                                                              'rom_restrictions': ['No elbow ROM '
+                                                                                                   'unless cleared',
+                                                                                                   'Maintain wrist and '
+                                                                                                   'hand mobility'],
+                                                                              'manual_therapy': ['Edema management',
+                                                                                                 'Scar care when '
+                                                                                                 'incision is healed'],
+                                                                              'therapeutic_exercise': ['Hand ROM',
+                                                                                                       'Wrist ROM',
+                                                                                                       'Grip exercises',
+                                                                                                       'Shoulder ROM '
+                                                                                                       'within '
+                                                                                                       'precautions',
+                                                                                                       'Scapular '
+                                                                                                       'retractions'],
+                                                                              'criteria_to_progress': ['Pain '
+                                                                                                       'controlled',
+                                                                                                       'Incision '
+                                                                                                       'healing',
+                                                                                                       'Surgeon '
+                                                                                                       'clearance to '
+                                                                                                       'begin ROM']},
+                                                       'Phase II: 2-6 weeks': {'goals': ['Begin protected elbow ROM',
+                                                                                         'Restore motion gradually',
+                                                                                         'Protect healing tendon'],
+                                                                               'precautions': ['No resisted elbow '
+                                                                                               'flexion',
+                                                                                               'No resisted supination',
+                                                                                               'Avoid aggressive elbow '
+                                                                                               'extension',
+                                                                                               'No lifting'],
+                                                                               'brace': ['Hinged elbow brace per '
+                                                                                         'protocol'],
+                                                                               'weight_bearing': ['No lifting with '
+                                                                                                  'involved upper '
+                                                                                                  'extremity'],
+                                                                               'rom_restrictions': ['Progress elbow '
+                                                                                                    'ROM per brace '
+                                                                                                    'settings',
+                                                                                                    'Avoid end-range '
+                                                                                                    'stress'],
+                                                                               'manual_therapy': ['Scar mobilization '
+                                                                                                  'when healed',
+                                                                                                  'Soft tissue '
+                                                                                                  'mobility',
+                                                                                                  'Edema control'],
+                                                                               'therapeutic_exercise': ['AAROM elbow '
+                                                                                                        'flexion',
+                                                                                                        'Protected '
+                                                                                                        'elbow '
+                                                                                                        'extension',
+                                                                                                        'Forearm '
+                                                                                                        'pronation/supination '
+                                                                                                        'within limits',
+                                                                                                        'Wrist ROM',
+                                                                                                        'Grip '
+                                                                                                        'strengthening',
+                                                                                                        'Scapular '
+                                                                                                        'retractions'],
+                                                                               'criteria_to_progress': ['Improved '
+                                                                                                        'protected ROM',
+                                                                                                        'No increased '
+                                                                                                        'pain or '
+                                                                                                        'swelling',
+                                                                                                        'Good '
+                                                                                                        'compliance '
+                                                                                                        'with '
+                                                                                                        'precautions']},
+                                                       'Phase III: 6-12 weeks': {'goals': ['Restore full elbow ROM',
+                                                                                           'Improve muscle control',
+                                                                                           'Prepare for strengthening'],
+                                                                                 'precautions': ['Avoid heavy lifting',
+                                                                                                 'Avoid sudden pulling',
+                                                                                                 'Avoid aggressive '
+                                                                                                 'resisted biceps '
+                                                                                                 'activity'],
+                                                                                 'brace': ['Wean brace as allowed'],
+                                                                                 'weight_bearing': ['Light functional '
+                                                                                                    'use only'],
+                                                                                 'rom_restrictions': ['Progress toward '
+                                                                                                      'full ROM'],
+                                                                                 'manual_therapy': ['Soft tissue '
+                                                                                                    'mobilization',
+                                                                                                    'Gentle stretching '
+                                                                                                    'as needed',
+                                                                                                    'Scar mobility'],
+                                                                                 'therapeutic_exercise': ['AROM elbow '
+                                                                                                          'flexion',
+                                                                                                          'AROM elbow '
+                                                                                                          'extension',
+                                                                                                          'AROM '
+                                                                                                          'pronation',
+                                                                                                          'AROM '
+                                                                                                          'supination',
+                                                                                                          'Shoulder '
+                                                                                                          'strengthening',
+                                                                                                          'Scapular '
+                                                                                                          'strengthening',
+                                                                                                          'Light '
+                                                                                                          'functional '
+                                                                                                          'reaching'],
+                                                                                 'criteria_to_progress': ['Full or '
+                                                                                                          'near full '
+                                                                                                          'ROM',
+                                                                                                          'Adequate '
+                                                                                                          'muscle '
+                                                                                                          'control',
+                                                                                                          'No pain '
+                                                                                                          'with AROM']},
+                                                       'Phase IV: 12-16 weeks': {'goals': ['Initiate progressive '
+                                                                                           'resisted exercise',
+                                                                                           'Improve elbow and forearm '
+                                                                                           'strength',
+                                                                                           'Improve functional '
+                                                                                           'tolerance'],
+                                                                                 'precautions': ['Avoid rapid '
+                                                                                                 'resistance '
+                                                                                                 'progression',
+                                                                                                 'Avoid painful '
+                                                                                                 'loading'],
+                                                                                 'brace': ['None'],
+                                                                                 'weight_bearing': ['Progress as '
+                                                                                                    'tolerated'],
+                                                                                 'rom_restrictions': ['Full ROM'],
+                                                                                 'manual_therapy': ['As needed'],
+                                                                                 'therapeutic_exercise': ['Light '
+                                                                                                          'biceps '
+                                                                                                          'curls',
+                                                                                                          'Hammer '
+                                                                                                          'curls',
+                                                                                                          'Theraband '
+                                                                                                          'elbow '
+                                                                                                          'extension',
+                                                                                                          'Resisted '
+                                                                                                          'pronation',
+                                                                                                          'Resisted '
+                                                                                                          'supination',
+                                                                                                          'Rows',
+                                                                                                          'Grip '
+                                                                                                          'strengthening'],
+                                                                                 'criteria_to_progress': ['Full ROM',
+                                                                                                          'Improving '
+                                                                                                          'strength',
+                                                                                                          'No pain '
+                                                                                                          'with light '
+                                                                                                          'resistance']},
+                                                       'Phase V: 4-6 months': {'goals': ['Return to full activity',
+                                                                                         'Improve functional strength',
+                                                                                         'Return to work and sport '
+                                                                                         'demands'],
+                                                                               'precautions': ['Avoid painful overload',
+                                                                                               'Progress heavy lifting '
+                                                                                               'gradually'],
+                                                                               'brace': ['None'],
+                                                                               'weight_bearing': ['Full'],
+                                                                               'rom_restrictions': ['Full ROM'],
+                                                                               'manual_therapy': ['As needed'],
+                                                                               'therapeutic_exercise': ['Progressive '
+                                                                                                        'curls',
+                                                                                                        'Cable rows',
+                                                                                                        'Farmer '
+                                                                                                        'carries',
+                                                                                                        'Suitcase '
+                                                                                                        'carries',
+                                                                                                        'Work '
+                                                                                                        'simulation',
+                                                                                                        'Sport-specific '
+                                                                                                        'progression'],
+                                                                               'criteria_to_progress': ['Functional '
+                                                                                                        'strength '
+                                                                                                        'restored',
+                                                                                                        'Independent '
+                                                                                                        'HEP',
+                                                                                                        'Return-to-work '
+                                                                                                        'or sport '
+                                                                                                        'clearance']}}},
+                   'Lateral Epicondylitis (Tennis Elbow)': {'phases': {'Acute Phase': {'goals': ['Reduce pain and '
+                                                                                                 'inflammation',
+                                                                                                 'Promote tendon '
+                                                                                                 'healing',
+                                                                                                 'Improve flexibility '
+                                                                                                 'of wrist extensors',
+                                                                                                 'Restore pain-free '
+                                                                                                 'ROM',
+                                                                                                 'Reduce stress on '
+                                                                                                 'common extensor '
+                                                                                                 'tendon'],
+                                                                                       'precautions': ['Avoid '
+                                                                                                       'repetitive '
+                                                                                                       'gripping',
+                                                                                                       'Avoid '
+                                                                                                       'repetitive '
+                                                                                                       'wrist '
+                                                                                                       'extension',
+                                                                                                       'Avoid painful '
+                                                                                                       'lifting '
+                                                                                                       'activities',
+                                                                                                       'Modify sport '
+                                                                                                       'and work '
+                                                                                                       'activities'],
+                                                                                       'brace': ['Cock-up wrist splint',
+                                                                                                 'Counterforce brace '
+                                                                                                 'once acute '
+                                                                                                 'tenderness decreases',
+                                                                                                 'Avoid counterforce '
+                                                                                                 'brace if radial '
+                                                                                                 'tunnel symptoms are '
+                                                                                                 'present',
+                                                                                                 'Avoid counterforce '
+                                                                                                 'brace if extensor '
+                                                                                                 'mass symptoms are '
+                                                                                                 'present'],
+                                                                                       'weight_bearing': ['As '
+                                                                                                          'tolerated'],
+                                                                                       'rom_restrictions': ['Pain-free '
+                                                                                                            'ROM only'],
+                                                                                       'modalities': ['Iontophoresis '
+                                                                                                      'with '
+                                                                                                      'dexamethasone',
+                                                                                                      'Phonophoresis',
+                                                                                                      'Ultrasound',
+                                                                                                      'Superficial '
+                                                                                                      'heat',
+                                                                                                      'Superficial '
+                                                                                                      'cold',
+                                                                                                      'Fluidotherapy',
+                                                                                                      'High-voltage '
+                                                                                                      'pulsed current'],
+                                                                                       'manual_therapy': ['Soft tissue '
+                                                                                                          'massage',
+                                                                                                          'Myofascial '
+                                                                                                          'release',
+                                                                                                          'Transfriction '
+                                                                                                          'massage '
+                                                                                                          'after acute '
+                                                                                                          'pain '
+                                                                                                          'subsides'],
+                                                                                       'therapeutic_exercise': ['AROM '
+                                                                                                                'elbow',
+                                                                                                                'AROM '
+                                                                                                                'forearm',
+                                                                                                                'AROM '
+                                                                                                                'wrist',
+                                                                                                                'AROM '
+                                                                                                                'hand',
+                                                                                                                'Passive '
+                                                                                                                'stretching '
+                                                                                                                'as '
+                                                                                                                'indicated',
+                                                                                                                'Radial '
+                                                                                                                'nerve '
+                                                                                                                'glides'],
+                                                                                       'patient_education': ['Ergonomic '
+                                                                                                             'education',
+                                                                                                             'Sports '
+                                                                                                             'modification',
+                                                                                                             'Activity '
+                                                                                                             'modification'],
+                                                                                       'criteria_to_progress': ['Reduced '
+                                                                                                                'pain',
+                                                                                                                'Improved '
+                                                                                                                'ROM',
+                                                                                                                'Improved '
+                                                                                                                'tolerance '
+                                                                                                                'to '
+                                                                                                                'gripping '
+                                                                                                                'activities']},
+                                                                       'Chronic Phase (>3 Months)': {'goals': ['Restore '
+                                                                                                               'flexibility',
+                                                                                                               'Restore '
+                                                                                                               'strength',
+                                                                                                               'Restore '
+                                                                                                               'endurance',
+                                                                                                               'Improve '
+                                                                                                               'tendon '
+                                                                                                               'loading '
+                                                                                                               'capacity',
+                                                                                                               'Return '
+                                                                                                               'to '
+                                                                                                               'work '
+                                                                                                               'and '
+                                                                                                               'sport'],
+                                                                                                     'precautions': ['Avoid '
+                                                                                                                     'symptom '
+                                                                                                                     'flare-ups',
+                                                                                                                     'Progress '
+                                                                                                                     'loading '
+                                                                                                                     'gradually'],
+                                                                                                     'brace': ['Counterforce '
+                                                                                                               'brace '
+                                                                                                               'as '
+                                                                                                               'needed',
+                                                                                                               'Avoid '
+                                                                                                               'brace '
+                                                                                                               'if '
+                                                                                                               'radial '
+                                                                                                               'tunnel '
+                                                                                                               'symptoms '
+                                                                                                               'are '
+                                                                                                               'present'],
+                                                                                                     'weight_bearing': ['Full'],
+                                                                                                     'rom_restrictions': ['None'],
+                                                                                                     'modalities': ['Iontophoresis',
+                                                                                                                    'Phonophoresis',
+                                                                                                                    'Ultrasound',
+                                                                                                                    'Heat',
+                                                                                                                    'Ice'],
+                                                                                                     'manual_therapy': ['Massage '
+                                                                                                                        'to '
+                                                                                                                        'increase '
+                                                                                                                        'local '
+                                                                                                                        'blood '
+                                                                                                                        'flow',
+                                                                                                                        'Soft '
+                                                                                                                        'tissue '
+                                                                                                                        'mobilization',
+                                                                                                                        'Myofascial '
+                                                                                                                        'release'],
+                                                                                                     'therapeutic_exercise': ['Stretching '
+                                                                                                                              'warm-up '
+                                                                                                                              'exercises',
+                                                                                                                              'Isometric '
+                                                                                                                              'wrist '
+                                                                                                                              'extensor '
+                                                                                                                              'strengthening',
+                                                                                                                              'Concentric '
+                                                                                                                              'wrist '
+                                                                                                                              'extensor '
+                                                                                                                              'strengthening',
+                                                                                                                              'Eccentric '
+                                                                                                                              'wrist '
+                                                                                                                              'extensor '
+                                                                                                                              'strengthening',
+                                                                                                                              'Grip '
+                                                                                                                              'strengthening '
+                                                                                                                              'progression',
+                                                                                                                              'Parascapular '
+                                                                                                                              'strengthening',
+                                                                                                                              'Body '
+                                                                                                                              'Blade '
+                                                                                                                              'training',
+                                                                                                                              'Upper-extremity '
+                                                                                                                              'stabilization '
+                                                                                                                              'training'],
+                                                                                                     'functional_training': ['Work '
+                                                                                                                             'simulation',
+                                                                                                                             'Sport-specific '
+                                                                                                                             'progression',
+                                                                                                                             'Interval '
+                                                                                                                             'training '
+                                                                                                                             'program'],
+                                                                                                     'patient_education': ['Ergonomic '
+                                                                                                                           'modifications',
+                                                                                                                           'Tool-handle '
+                                                                                                                           'modification',
+                                                                                                                           'Avoid '
+                                                                                                                           'repetitive '
+                                                                                                                           'postures',
+                                                                                                                           'Avoid '
+                                                                                                                           'prolonged '
+                                                                                                                           'static '
+                                                                                                                           'positioning'],
+                                                                                                     'criteria_to_discharge': ['Pain-free '
+                                                                                                                               'gripping',
+                                                                                                                               'Pain-free '
+                                                                                                                               'lifting',
+                                                                                                                               'Return '
+                                                                                                                               'to '
+                                                                                                                               'work '
+                                                                                                                               'activities',
+                                                                                                                               'Return '
+                                                                                                                               'to '
+                                                                                                                               'sport '
+                                                                                                                               'activities',
+                                                                                                                               'Independent '
+                                                                                                                               'HEP']}}}},
          'Wrist': {}},
  'Back': {'Upper': {},
           'Middle': {},
-          'Lower': {'Lumbar Fusion': {'status': 'indexed', 'phases': {}},
-                    'Lumbar Discectomy': {'status': 'indexed', 'phases': {}},
-                    'Lumbar Laminectomy': {'status': 'indexed', 'phases': {}},
+          'Lower': {'Lumbar Fusion': {'phases': {'Phase I: Weeks 1-6': {'goals': ['Decrease pain and inflammation',
+                                                                                  'Increase aerobic tolerance',
+                                                                                  'Improve activity tolerance',
+                                                                                  'Educate proper body mechanics',
+                                                                                  'Improve ADL performance'],
+                                                                        'precautions': ['No lifting, twisting, or '
+                                                                                        'bending lumbar spine',
+                                                                                        'Avoid posterior pelvic tilt '
+                                                                                        'loading',
+                                                                                        'Avoid exercises that increase '
+                                                                                        'symptoms',
+                                                                                        'No prone trunk extension',
+                                                                                        'No prone leg extension until '
+                                                                                        '8 weeks'],
+                                                                        'brace': ['Brace or corset per surgeon orders'],
+                                                                        'weight_bearing': ['As tolerated'],
+                                                                        'rom_restrictions': ['Neutral spine maintained '
+                                                                                             'during all exercises',
+                                                                                             'Avoid lumbar ROM '
+                                                                                             'loading'],
+                                                                        'manual_therapy': ['Gentle neural '
+                                                                                           'mobilization'],
+                                                                        'therapeutic_exercise': ['Ankle pumps',
+                                                                                                 'Long arc quads',
+                                                                                                 'Short arc quads',
+                                                                                                 'Diaphragmatic '
+                                                                                                 'breathing',
+                                                                                                 'Relaxation exercises',
+                                                                                                 'Abdominal isometrics',
+                                                                                                 'Walking progression '
+                                                                                                 'to 0.5 mile daily',
+                                                                                                 'Cardiovascular '
+                                                                                                 'activity 15-30 '
+                                                                                                 'minutes'],
+                                                                        'functional_training': ['Bed mobility',
+                                                                                                'Sit-to-stand '
+                                                                                                'mechanics',
+                                                                                                'Neutral spine ADLs',
+                                                                                                'Postural education'],
+                                                                        'criteria_to_progress': ['Independent HEP',
+                                                                                                 '15 minutes exercise '
+                                                                                                 'tolerance',
+                                                                                                 '15-30 minutes '
+                                                                                                 'cardiovascular '
+                                                                                                 'activity',
+                                                                                                 'Independent '
+                                                                                                 'self-care',
+                                                                                                 'Pain controlled']},
+                                                 'Phase II: Weeks 7-12': {'goals': ['Restore neuromuscular control',
+                                                                                    'Normalize gait',
+                                                                                    'Improve posture',
+                                                                                    'Improve work tolerance',
+                                                                                    'Increase cardiovascular '
+                                                                                    'endurance'],
+                                                                          'precautions': ['No lifting greater than 20 '
+                                                                                          'pounds',
+                                                                                          'No overhead lifting',
+                                                                                          'Avoid excessive bending',
+                                                                                          'Avoid excessive twisting',
+                                                                                          'Limit lumbar extension',
+                                                                                          'Avoid lumbar loading'],
+                                                                          'brace': ['Begin brace weaning if '
+                                                                                    'appropriate'],
+                                                                          'weight_bearing': ['Full'],
+                                                                          'rom_restrictions': ['No standing ROM '
+                                                                                               'testing until week 8'],
+                                                                          'manual_therapy': ['Grade I-II thoracic '
+                                                                                             'mobilizations',
+                                                                                             'Scar mobilization',
+                                                                                             'Soft tissue mobilization',
+                                                                                             'Patient self-massage '
+                                                                                             'instruction'],
+                                                                          'therapeutic_exercise': ['Abdominal '
+                                                                                                   'drawing-in',
+                                                                                                   'Transverse '
+                                                                                                   'abdominis '
+                                                                                                   'activation',
+                                                                                                   'Multifidus '
+                                                                                                   'activation',
+                                                                                                   'Pressure '
+                                                                                                   'biofeedback '
+                                                                                                   'training',
+                                                                                                   'Neural '
+                                                                                                   'mobilization',
+                                                                                                   'Diaphragmatic '
+                                                                                                   'breathing',
+                                                                                                   'Supine heel slides',
+                                                                                                   'Supine marches',
+                                                                                                   'Hip abduction '
+                                                                                                   'slides',
+                                                                                                   'Clamshells',
+                                                                                                   'Mini squats',
+                                                                                                   'Theraband rows',
+                                                                                                   'Theraband lat '
+                                                                                                   'pulls',
+                                                                                                   'Bridging',
+                                                                                                   'Bird dog '
+                                                                                                   'progression'],
+                                                                          'criteria_to_progress': ['30 minutes '
+                                                                                                   'cardiovascular '
+                                                                                                   'exercise',
+                                                                                                   'Improved posture',
+                                                                                                   'Improved trunk '
+                                                                                                   'control',
+                                                                                                   'Improved ADL '
+                                                                                                   'tolerance']},
+                                                 'Phase III: Weeks 13-18': {'goals': ['Improve trunk control',
+                                                                                      'Improve flexibility',
+                                                                                      'Increase strength',
+                                                                                      'Return to work activities',
+                                                                                      'Progress lifting mechanics'],
+                                                                            'precautions': ['Gradually progress '
+                                                                                            'loading',
+                                                                                            'Maintain proper lifting '
+                                                                                            'mechanics'],
+                                                                            'brace': ['Discontinued unless otherwise '
+                                                                                      'directed'],
+                                                                            'weight_bearing': ['Full'],
+                                                                            'rom_restrictions': ['Lumbar ROM as '
+                                                                                                 'tolerated'],
+                                                                            'manual_therapy': ['Thoracic mobilization',
+                                                                                               'Hip mobilization',
+                                                                                               'Soft tissue '
+                                                                                               'mobilization'],
+                                                                            'therapeutic_exercise': ['Lumbar ROM',
+                                                                                                     'Balance '
+                                                                                                     'progression',
+                                                                                                     'Neural '
+                                                                                                     'mobilization',
+                                                                                                     'Core '
+                                                                                                     'stabilization '
+                                                                                                     'progression',
+                                                                                                     'Bridge on '
+                                                                                                     'unstable surface',
+                                                                                                     'Quadruped '
+                                                                                                     'opposite arm-leg '
+                                                                                                     'lifts',
+                                                                                                     'Physioball '
+                                                                                                     'arm-leg lifts',
+                                                                                                     'Squats',
+                                                                                                     'Stair '
+                                                                                                     'progression',
+                                                                                                     'Planks',
+                                                                                                     'Side planks',
+                                                                                                     'Single-leg '
+                                                                                                     'bridges'],
+                                                                            'functional_training': ['Squatting',
+                                                                                                    'Lunges',
+                                                                                                    'Lifting mechanics',
+                                                                                                    'Work simulation',
+                                                                                                    'Functional '
+                                                                                                    'strengthening'],
+                                                                            'criteria_to_progress': ['Independent gym '
+                                                                                                     'program',
+                                                                                                     'Functional ROM',
+                                                                                                     'Functional '
+                                                                                                     'strength',
+                                                                                                     'Independent '
+                                                                                                     'HEP']}}},
+                    'Lumbar Discectomy': {'phases': {'Phase I: Weeks 0-4': {'goals': ['Decrease pain',
+                                                                                      'Promote healing',
+                                                                                      'Improve walking tolerance',
+                                                                                      'Establish neutral spine control',
+                                                                                      'Independent ADLs'],
+                                                                            'precautions': ['No bending',
+                                                                                            'No lifting',
+                                                                                            'No twisting',
+                                                                                            'No lifting greater than 5 '
+                                                                                            'lbs first 2 weeks',
+                                                                                            'No lifting greater than '
+                                                                                            '10 lbs until week 4',
+                                                                                            'Limit lumbar flexion end '
+                                                                                            'range',
+                                                                                            'Limit sitting to 15 '
+                                                                                            'minutes first 2 weeks',
+                                                                                            'Limit sitting to 30 '
+                                                                                            'minutes until week 4'],
+                                                                            'brace': ['Typically none unless '
+                                                                                      'prescribed'],
+                                                                            'weight_bearing': ['As tolerated'],
+                                                                            'rom_restrictions': ['Avoid end-range '
+                                                                                                 'flexion',
+                                                                                                 'Neutral spine '
+                                                                                                 'emphasis'],
+                                                                            'manual_therapy': ['Soft tissue techniques '
+                                                                                               'as needed',
+                                                                                               'Pain modulation'],
+                                                                            'therapeutic_exercise': ['TA bracing',
+                                                                                                     'Walking program',
+                                                                                                     'Glute sets',
+                                                                                                     'Neutral spine '
+                                                                                                     'training',
+                                                                                                     'Log rolling',
+                                                                                                     'Transfer '
+                                                                                                     'training'],
+                                                                            'functional_training': ['Bed mobility',
+                                                                                                    'Sit-to-stand',
+                                                                                                    'Posture training'],
+                                                                            'criteria_to_progress': ['Independent HEP',
+                                                                                                     '10 minute '
+                                                                                                     'walking twice '
+                                                                                                     'daily',
+                                                                                                     'Pain controlled',
+                                                                                                     'Maintains '
+                                                                                                     'abdominal brace '
+                                                                                                     'with movement']},
+                                                     'Phase II: Weeks 4-8': {'goals': ['Improve trunk stability',
+                                                                                       'Normalize movement patterns',
+                                                                                       'Improve endurance',
+                                                                                       'Prepare for return to work'],
+                                                                             'precautions': ['Limit lifting to 20 lbs '
+                                                                                             'by week 6',
+                                                                                             'Avoid excessive flexion',
+                                                                                             'Avoid excessive '
+                                                                                             'rotation'],
+                                                                             'brace': ['None unless prescribed'],
+                                                                             'weight_bearing': ['Full'],
+                                                                             'rom_restrictions': ['Avoid excessive '
+                                                                                                  'lumbar flexion'],
+                                                                             'manual_therapy': ['Thoracic mobilization',
+                                                                                                'STM lumbar/thoracic '
+                                                                                                'region',
+                                                                                                'Pain-relieving '
+                                                                                                'unloading techniques'],
+                                                                             'therapeutic_exercise': ['TA bracing '
+                                                                                                      'progression',
+                                                                                                      'Quadruped core '
+                                                                                                      'stabilization',
+                                                                                                      'Walking '
+                                                                                                      'progression',
+                                                                                                      'Cardio '
+                                                                                                      'progression',
+                                                                                                      'Hip stretching',
+                                                                                                      'Hamstring '
+                                                                                                      'stretching',
+                                                                                                      'Psoas '
+                                                                                                      'stretching',
+                                                                                                      'Deep hip '
+                                                                                                      'rotator '
+                                                                                                      'stretching',
+                                                                                                      'Squatting',
+                                                                                                      'Lunging'],
+                                                                             'criteria_to_progress': ['30 minutes '
+                                                                                                      'cardio daily',
+                                                                                                      'Neutral spine '
+                                                                                                      'during activity',
+                                                                                                      'Improved '
+                                                                                                      'sitting '
+                                                                                                      'tolerance',
+                                                                                                      'Light-duty work '
+                                                                                                      'readiness']},
+                                                     'Phase III: Weeks 8-12': {'goals': ['Restore strength',
+                                                                                         'Restore ROM',
+                                                                                         'Return to functional '
+                                                                                         'activities'],
+                                                                               'precautions': ['Maintain good body '
+                                                                                               'mechanics'],
+                                                                               'brace': ['None'],
+                                                                               'weight_bearing': ['Full'],
+                                                                               'rom_restrictions': ['Progress as '
+                                                                                                    'tolerated'],
+                                                                               'manual_therapy': ['As needed'],
+                                                                               'therapeutic_exercise': ['Single-leg '
+                                                                                                        'bridges',
+                                                                                                        'Physioball '
+                                                                                                        'strengthening',
+                                                                                                        'Quadruped '
+                                                                                                        'arm-leg lifts',
+                                                                                                        'Advanced core '
+                                                                                                        'training',
+                                                                                                        'Running '
+                                                                                                        'progression',
+                                                                                                        'Floor-to-stand '
+                                                                                                        'training',
+                                                                                                        'Balance '
+                                                                                                        'training'],
+                                                                               'criteria_to_progress': ['Full '
+                                                                                                        'pain-free ROM',
+                                                                                                        'Independent '
+                                                                                                        'gym program',
+                                                                                                        'Full-duty '
+                                                                                                        'work '
+                                                                                                        'progression']},
+                                                     'Phase IV: 12+ Weeks': {'goals': ['Return to sport',
+                                                                                       'Return to unrestricted '
+                                                                                       'activity',
+                                                                                       'Prevent recurrence'],
+                                                                             'precautions': ['Avoid repeated end-range '
+                                                                                             'lumbar flexion',
+                                                                                             'Avoid heavy deadlifts '
+                                                                                             'initially'],
+                                                                             'brace': ['None'],
+                                                                             'weight_bearing': ['Full'],
+                                                                             'rom_restrictions': ['None'],
+                                                                             'manual_therapy': ['As needed'],
+                                                                             'therapeutic_exercise': ['Advanced core '
+                                                                                                      'strengthening',
+                                                                                                      'Sport-specific '
+                                                                                                      'training',
+                                                                                                      'Advanced cardio',
+                                                                                                      'Plyometric '
+                                                                                                      'progression',
+                                                                                                      'Modified '
+                                                                                                      'abdominal '
+                                                                                                      'strengthening'],
+                                                                             'criteria_to_progress': ['Return to sport',
+                                                                                                      'Return to '
+                                                                                                      'unrestricted '
+                                                                                                      'work']}}},
+                    'Lumbar Laminectomy': {'phases': {'Phase I: Weeks 0-4': {'goals': ['Decrease pain',
+                                                                                       'Improve walking tolerance',
+                                                                                       'Restore mobility',
+                                                                                       'Independent ADLs'],
+                                                                             'precautions': ['No bending',
+                                                                                             'No lifting',
+                                                                                             'No twisting',
+                                                                                             'No lifting greater than '
+                                                                                             '5 lbs first 2 weeks',
+                                                                                             'No lifting greater than '
+                                                                                             '10 lbs until week 4'],
+                                                                             'brace': ['Typically none unless '
+                                                                                       'prescribed'],
+                                                                             'weight_bearing': ['As tolerated'],
+                                                                             'rom_restrictions': ['Limit end-range '
+                                                                                                  'lumbar motion'],
+                                                                             'manual_therapy': ['Soft tissue '
+                                                                                                'management',
+                                                                                                'Pain modulation'],
+                                                                             'therapeutic_exercise': ['TA bracing',
+                                                                                                      'Walking program',
+                                                                                                      'Glute sets',
+                                                                                                      'Neutral spine '
+                                                                                                      'training'],
+                                                                             'criteria_to_progress': ['Pain controlled',
+                                                                                                      'Independent HEP',
+                                                                                                      '10 minute '
+                                                                                                      'walking twice '
+                                                                                                      'daily']},
+                                                      'Phase II: Weeks 4-8': {'goals': ['Improve trunk stability',
+                                                                                        'Improve endurance',
+                                                                                        'Improve flexibility'],
+                                                                              'precautions': ['Avoid excessive '
+                                                                                              'twisting',
+                                                                                              'Avoid excessive '
+                                                                                              'lifting'],
+                                                                              'brace': ['None'],
+                                                                              'weight_bearing': ['Full'],
+                                                                              'rom_restrictions': ['ROM as tolerated'],
+                                                                              'manual_therapy': ['Thoracic '
+                                                                                                 'mobilization',
+                                                                                                 'Soft tissue '
+                                                                                                 'mobilization',
+                                                                                                 'Pain-relieving '
+                                                                                                 'techniques'],
+                                                                              'therapeutic_exercise': ['TA progression',
+                                                                                                       'Core '
+                                                                                                       'stabilization',
+                                                                                                       'Walking '
+                                                                                                       'progression',
+                                                                                                       'Bike',
+                                                                                                       'Stretching '
+                                                                                                       'program',
+                                                                                                       'Squatting',
+                                                                                                       'Lunging'],
+                                                                              'criteria_to_progress': ['30 minutes '
+                                                                                                       'cardio',
+                                                                                                       'Good trunk '
+                                                                                                       'control',
+                                                                                                       'Return-to-work '
+                                                                                                       'readiness']},
+                                                      'Phase III: Weeks 8-12': {'goals': ['Restore functional strength',
+                                                                                          'Improve endurance',
+                                                                                          'Improve lifting tolerance'],
+                                                                                'precautions': ['Progress lifting '
+                                                                                                'gradually'],
+                                                                                'brace': ['None'],
+                                                                                'weight_bearing': ['Full'],
+                                                                                'rom_restrictions': ['As tolerated'],
+                                                                                'manual_therapy': ['As needed'],
+                                                                                'therapeutic_exercise': ['Single-leg '
+                                                                                                         'bridges',
+                                                                                                         'Physioball '
+                                                                                                         'training',
+                                                                                                         'Core '
+                                                                                                         'strengthening',
+                                                                                                         'Balance '
+                                                                                                         'training',
+                                                                                                         'Running '
+                                                                                                         'progression'],
+                                                                                'criteria_to_progress': ['Functional '
+                                                                                                         'ROM',
+                                                                                                         'Independent '
+                                                                                                         'gym '
+                                                                                                         'program']},
+                                                      'Phase IV: 12+ Weeks': {'goals': ['Return to unrestricted '
+                                                                                        'activity',
+                                                                                        'Return to work'],
+                                                                              'precautions': ['Progress gradually'],
+                                                                              'brace': ['None'],
+                                                                              'weight_bearing': ['Full'],
+                                                                              'rom_restrictions': ['None'],
+                                                                              'manual_therapy': ['As needed'],
+                                                                              'therapeutic_exercise': ['Advanced '
+                                                                                                       'strengthening',
+                                                                                                       'Sport-specific '
+                                                                                                       'training',
+                                                                                                       'Advanced '
+                                                                                                       'cardiovascular '
+                                                                                                       'training'],
+                                                                              'criteria_to_progress': ['Full-duty work',
+                                                                                                       'Independent '
+                                                                                                       'fitness '
+                                                                                                       'program']}}},
                     'Lumbar Spinal Stenosis': {'status': 'indexed', 'phases': {}},
                     'Lumbar Disc Herniation': {'status': 'indexed', 'phases': {}},
                     'Spondylolisthesis': {'status': 'indexed', 'phases': {}}}},

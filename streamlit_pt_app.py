@@ -2,18 +2,9 @@ import streamlit as st
 from datetime import datetime
 
 try:
-    from pt_master_database_v1 import protocols
+    from pt_master_database_v2 import protocols
 except ImportError:
-    protocols = {
-        "Arm": {
-            "Elbow": {
-                "Lateral Epicondylitis (Tennis Elbow)": {
-                    "status": "indexed",
-                    "phases": {}
-                }
-            }
-        }
-    }
+    from pt_master_database_v1 import protocols
 
 
 st.set_page_config(
@@ -30,6 +21,42 @@ tab1, tab2, tab3 = st.tabs([
     "Search Diagnosis",
     "Generate Note"
 ])
+
+
+SECTION_ORDER = [
+    "goals",
+    "precautions",
+    "brace",
+    "weight_bearing",
+    "rom_restrictions",
+    "modalities",
+    "manual_therapy",
+    "therapeutic_exercise",
+    "neuromuscular_reeducation",
+    "functional_training",
+    "cardio",
+    "patient_education",
+    "criteria_to_progress",
+    "criteria_to_discharge",
+]
+
+
+SECTION_LABELS = {
+    "goals": "Goals",
+    "precautions": "Precautions",
+    "brace": "Brace / Splint",
+    "weight_bearing": "Weight Bearing",
+    "rom_restrictions": "ROM Restrictions",
+    "modalities": "Modalities",
+    "manual_therapy": "Manual Therapy",
+    "therapeutic_exercise": "Therapeutic Exercise",
+    "neuromuscular_reeducation": "Neuromuscular Re-ed",
+    "functional_training": "Functional Training",
+    "cardio": "Cardio",
+    "patient_education": "Patient Education",
+    "criteria_to_progress": "Criteria to Progress",
+    "criteria_to_discharge": "Criteria to Discharge",
+}
 
 
 def get_all_diagnoses():
@@ -51,23 +78,44 @@ def get_protocol(region, area, diagnosis):
     return protocols[region][area][diagnosis]
 
 
+def display_items(items):
+    if isinstance(items, list):
+        for item in items:
+            st.write(f"- {item}")
+    elif isinstance(items, dict):
+        st.json(items)
+    else:
+        st.write(items)
+
+
 def display_protocol(protocol):
     st.subheader("Protocol Information")
 
-    if "phases" in protocol and protocol["phases"]:
-        phase_names = list(protocol["phases"].keys())
+    phases = protocol.get("phases", {})
+
+    if phases:
+        phase_names = list(phases.keys())
         selected_phase = st.selectbox("Select Phase", phase_names)
 
-        phase_data = protocol["phases"][selected_phase]
+        phase_data = phases[selected_phase]
 
-        for section, items in phase_data.items():
-            st.markdown(f"### {section.replace('_', ' ').title()}")
+        for section in SECTION_ORDER:
+            if section in phase_data:
+                label = SECTION_LABELS.get(section, section.replace("_", " ").title())
 
-            if isinstance(items, list):
-                for item in items:
-                    st.write(f"- {item}")
-            else:
-                st.write(items)
+                with st.expander(label, expanded=(section == "goals")):
+                    display_items(phase_data[section])
+
+        extra_sections = [
+            section for section in phase_data.keys()
+            if section not in SECTION_ORDER
+        ]
+
+        for section in extra_sections:
+            label = section.replace("_", " ").title()
+            with st.expander(label):
+                display_items(phase_data[section])
+
     else:
         st.info(
             "This diagnosis is indexed in the master database. "
@@ -132,13 +180,39 @@ with tab3:
             format_func=lambda x: f"{x['diagnosis']} ({x['region']} / {x['area']})"
         )
 
+        protocol = get_protocol(
+            selected["region"],
+            selected["area"],
+            selected["diagnosis"]
+        )
+
+        phase_name = "Selected phase"
+        suggested_exercises = []
+
+        phases = protocol.get("phases", {})
+        if phases:
+            phase_name = st.selectbox("Select Phase", list(phases.keys()))
+            suggested_exercises = phases[phase_name].get("therapeutic_exercise", [])
+
+            if suggested_exercises:
+                chosen_exercises = st.multiselect(
+                    "Select Exercises Performed",
+                    suggested_exercises,
+                    default=suggested_exercises[:3]
+                )
+            else:
+                chosen_exercises = []
+        else:
+            st.info("No detailed phases available yet for this diagnosis.")
+            chosen_exercises = []
+
         treatment_focus = st.text_area(
             "Treatment Focus",
             placeholder="Example: ROM, strengthening, gait training, balance, pain control"
         )
 
-        exercises = st.text_area(
-            "Exercises Performed",
+        extra_exercises = st.text_area(
+            "Additional Exercises Performed",
             placeholder="Example: heel slides, quad sets, step-ups, bike"
         )
 
@@ -158,13 +232,19 @@ with tab3:
         )
 
         if st.button("Generate Note"):
+            exercise_list = list(chosen_exercises)
+
+            if extra_exercises.strip():
+                exercise_list.append(extra_exercises.strip())
+
+            exercise_text = ", ".join(exercise_list) if exercise_list else "skilled therapeutic exercise"
+
             note = (
                 f"Therapeutic interventions were performed this visit for "
-                f"{selected['diagnosis']}. Treatment focused on {treatment_focus}. "
-                f"Patient completed {exercises}. Patient required {cueing}. "
-                f"Patient {response}. Patient continues to benefit from skilled PT "
-                f"services to address remaining impairments and progress toward "
-                f"functional goals."
+                f"{selected['diagnosis']} during {phase_name}. Treatment focused on "
+                f"{treatment_focus}. Patient completed {exercise_text}. Patient required "
+                f"{cueing}. Patient {response}. Patient continues to benefit from skilled PT "
+                f"services to address remaining impairments and progress toward functional goals."
             )
 
             st.subheader("Generated Note")
